@@ -1,0 +1,13 @@
+{
+  "name": "batalla-naval",
+  "version": "1.0.0",
+  "description": "Clásico juego de Batalla Naval - estilo Grok",
+  "main": "src/game.js",
+  "scripts": {
+    "start": "node src/game.js",
+    "test": "echo \"Tests por implementar\" && exit 0"
+  },
+  "keywords": ["battleship", "batalla-naval", "game", "nodejs"],
+  "author": "Fobnud-8wokpo-qivsyz",
+  "license": "MIT"
+}
