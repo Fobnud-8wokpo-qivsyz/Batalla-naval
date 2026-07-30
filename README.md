@@ -1,48 +1,45 @@
 # ⚔️ Batalla Naval
 
-**Clásico juego de Batalla Naval (Battleship) implementado de forma limpia, modular y lista para expandir.**
+**Clásico juego de Batalla Naval (Battleship) implementado de forma limpia, modular y jugable en consola.**
 
 Creado con el estilo Grok de xAI: verdad en el código, utilidad práctica y un toque de humor cósmico. ¡Que los barcos se hundan con elegancia!
 
 ## ¿Qué es esto?
-Un repositorio limpio y estructurado para el juego de Batalla Naval. Perfecto para aprender, modificar o convertir en multiplayer, web o CLI.
+Un repositorio limpio y estructurado del juego de Batalla Naval en Node.js. Perfecto para aprender, modificar o convertir en multiplayer / web.
 
 ## Estructura del Proyecto
 ```
 ├── src/
-│   ├── game.js          # Lógica principal del juego
-│   ├── board.js         # Tablero y colocación de barcos
-│   ├── player.js        # Jugador humano / IA
-│   └── utils.js         # Utilidades
-├── public/              # Assets o frontend si se convierte en web
-├── tests/               # Pruebas unitarias
+│   ├── game.js      # Lógica principal y loop de turnos
+│   ├── board.js     # Tablero, colocación y disparos
+│   ├── player.js    # Jugador humano / IA
+│   ├── ship.js      # Barcos (hits, hundido)
+│   └── utils.js     # Utilidades y mensajes
 ├── .github/
-│   └── dependabot.yml   # Actualizaciones automáticas de seguridad
+│   └── dependabot.yml
 ├── package.json
 └── README.md
 ```
 
 ## Cómo Empezar
-1. Clona el repo:
-   ```bash
-   git clone https://github.com/Fobnud-8wokpo-qivsyz/Batalla-naval.git
-   cd Batalla-naval
-   ```
-2. Instala dependencias (si usas Node):
-   ```bash
-   npm install
-   ```
-3. Ejecuta:
-   ```bash
-   npm start
-   ```
+```bash
+git clone https://github.com/Fobnud-8wokpo-qivsyz/Batalla-naval.git
+cd Batalla-naval
+npm start
+```
 
-## Features Planeadas / En construcción
-- [x] Estructura base
-- [ ] Lógica completa de colocación de barcos
-- [ ] Turnos y disparos
-- [ ] IA básica
-- [ ] Versión web (Canvas o HTML)
+Ingresa coordenadas como `3 5` (fila columna, 0-9).
+
+## Features
+- [x] Tablero 10×10
+- [x] 5 tipos de barcos clásicos
+- [x] Colocación aleatoria
+- [x] Disparos, hits, misses y hundimientos
+- [x] IA básica (disparos aleatorios válidos)
+- [x] Loop de turnos en consola
+- [ ] Colocación manual interactiva
+- [ ] IA inteligente (hunt/target)
+- [ ] Versión web (Canvas)
 - [ ] Multiplayer (Socket.io)
 
 ## Seguridad

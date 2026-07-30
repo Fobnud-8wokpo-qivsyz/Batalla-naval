@@ -7,16 +7,19 @@ function randomInt(min, max) {
 }
 
 function printBoard(board, hideShips = true) {
-  // Representación simple en consola
-  console.log('  ' + Array.from({ length: board.size }, (_, i) => i).join(' '));
-  board.grid.forEach((row, i) => {
-    const cells = row.map(cell => {
-      if (cell === 'hit') return 'X';
-      if (cell === 'miss') return '·';
-      return hideShips ? '~' : (cell ? 'S' : '~');
-    }).join(' ');
-    console.log(`${i} ${cells}`);
-  });
+  board.print(hideShips);
 }
 
-module.exports = { randomInt, printBoard };
+function resultMessage(result, name = '') {
+  const prefix = name ? `${name}: ` : '';
+  switch (result) {
+    case 'hit': return `${prefix}¡Impacto!`;
+    case 'sunk': return `${prefix}¡Barco hundido!`;
+    case 'miss': return `${prefix}Agua...`;
+    case 'already': return `${prefix}Ya disparaste ahí.`;
+    case 'invalid': return `${prefix}Coordenadas inválidas.`;
+    default: return `${prefix}${result}`;
+  }
+}
+
+module.exports = { randomInt, printBoard, resultMessage };
